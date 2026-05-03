@@ -4,6 +4,22 @@ A TouchDesigner utility component that scans your project for external file depe
 
 ---
 
+## Screenshots
+
+**Demo network** — typical project with file references scattered across drives and paths:
+
+![Demo network](screenshots/02_demo_network.jpg)
+
+**Find results** — scan output listing every found file with its operator path:
+
+![Find results](screenshots/03_find_results.png)
+
+**Panel UI** — full interface with all configuration options:
+
+![Panel UI](screenshots/01_panel_ui.png)
+
+---
+
 ## The Problem
 
 TD projects reference files by absolute path (`C:/Users/studio/assets/image.png`). Move the project to another machine or share it, and those references break. Manually hunting and relinking files is tedious and error-prone.
