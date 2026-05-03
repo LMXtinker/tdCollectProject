@@ -1,0 +1,19 @@
+# TouchDesigner
+*.toe
+*.bak
+Backup/
+
+# Dev artifacts
+old/
+CollectTDProject_dev.toe
+CollectTDProject_handoff.md
+scripts/refresh_status_patch.md
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python
+__pycache__/
+*.pyc
