@@ -17,3 +17,20 @@ desktop.ini
 # Python
 __pycache__/
 *.pyc
+
+# Consolidation output folders (created at runtime)
+Audio/
+Data/
+Font/
+Geo/
+Image/
+Movie/
+Component/
+
+# TD cache + temp
+TDImportCache/
+CollectTDProject_.tox
+
+# Local tooling
+.claude/
+.mcp.json
