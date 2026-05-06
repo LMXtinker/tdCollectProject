@@ -72,7 +72,7 @@ CollectTDProject automates the whole process.
 ## Installation
 
 1. Download `CollectTDProject.tox` from the [Releases](../../releases/latest) page.
-2. In TouchDesigner, drag the `.tox` into any network, or use **OP Create Dialog → From File**.
+2. In TouchDesigner, drag the `.tox` into any network.
 3. The component is ready immediately — no additional setup.
 
 **Recommended placement:** Drop it at `/project1` so it can reach the full network.
@@ -83,7 +83,7 @@ CollectTDProject automates the whole process.
 
 ### Quick Start
 
-1. Open the component viewer (`V` on the node, or click the viewer icon)
+1. Open the component viewer (`A` on the node, or click the viewer icon)
 2. Click **FIND** — scans the project and lists all found file references and total size in the log
 3. Review the log output, adjust exclusions if needed, re-scan
 4. Click **CONSOLIDATE** — transfers files and rewrites parameters

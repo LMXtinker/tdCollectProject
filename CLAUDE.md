@@ -15,12 +15,11 @@ Distributable: `CollectTDProject.tox` (commit after saving from TD)
 
 ## Briefing Shortcut
 
-When the user says **"brief yourself with the project"**, read only the compressed agent-ingestion versions (token-efficient, content-identical):
-- `cprsd_HANDOFF.md`
-- `cprsd_CONTRIBUTING.md`
-- `cprsd_README.md`
+When the user says **"brief yourself with the project"** :
+- `HANDOFF.md`
+- `CONTRIBUTING.md`
+- `README.md`
 
-Do NOT read the originals for this purpose. These files are gitignored and local-only.
 
 ---
 
