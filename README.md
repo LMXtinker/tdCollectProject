@@ -1,8 +1,8 @@
 # CollectTDProject
 
-![Version](https://img.shields.io/badge/version-1.3.0-blue) ![Status](https://img.shields.io/badge/status-beta-yellow) ![TouchDesigner](https://img.shields.io/badge/TouchDesigner-2025.32460+-orange) ![License](https://img.shields.io/badge/license-GPL--3.0-green)
+![Version](https://img.shields.io/badge/version-0.3.0-blue) ![Status](https://img.shields.io/badge/status-beta-yellow) ![TouchDesigner](https://img.shields.io/badge/TouchDesigner-2025+-orange) ![License](https://img.shields.io/badge/license-GPL--3.0-green)
 
-> Last updated: 2026-05-05 · Released: v1.3.0 (broken-path detection, replayable relocation log, preset auto-increment + smart defaults, redesigned panel UI)
+> Last updated: 2026-05-07 · v0.3.0 (beta) — broken-path detection, replayable relocation log, preset save/load with auto-increment, redesigned panel UI
 
 A TouchDesigner utility component that scans your project for external file dependencies, copies or moves them into a local folder structure, and rewrites operator parameters to relative paths — making your project fully portable.
 
@@ -24,36 +24,37 @@ CollectTDProject automates the whole process.
 
 ## Features
 
-- Recursive scan of the entire project network, or a defined subtree
+- ⚠️ **Broken-path detection** — missing files flagged in the log, never silently dropped
+- 📦 **Copy or Move** with three conflict strategies: Skip, Overwrite, Auto-rename
+- ✏️ **Rewrites OP parameters** to relative paths after transfer
+- ↩️ **Undo + replayable relocation log** — reverse in-panel, or run the generated `.py` from any terminal to roll back after TD is closed
+- 🎛️ **Preset save/load** — per-project smart defaults, auto-increments on filename collision
+- 🛡️ **Safety .toe backup** — saves `<project>.original.toe` once before any change
+- 🧹 **Exclusion presets** — one-click toggles for Images, Video, Audio, 3D/Geo, Data, TOX
+
+<details>
+<summary>Full feature list</summary>
+
+- Recursive scan of the entire project network or a defined subtree
 - Detects file references across all operator types by evaluating string parameters
-- **Broken-path detection** — references that point to missing or unreachable files are reported (with a ⚠ marker) instead of silently dropped, so nothing slips through
-- Smart skip rule — already-local references (relative path resolving inside `project.folder` and the file actually exists) are filtered out automatically; everything else (absolute, external, broken) is recorded
+- Smart skip rule — already-local relative references that resolve inside `project.folder` are filtered out automatically; everything else (absolute, external, broken) is recorded
 - Organizes collected files into standard subfolders: `Image/`, `Movie/`, `Audio/`, `Geo/`, `Data/`, `Font/`, `Component/`
-- **Copy or Move** — non-destructive copy mode by default
-- **Conflict resolution** — Skip, Overwrite, or Auto-rename when a file already exists at the destination
-- **Rewrites OP parameters** to relative paths after transfer (optional, on by default)
-- **File size calculator** — shows total dependency size before you commit to anything
-- **Undo** — reverses the last consolidation, restoring original parameter values (and returning moved files in Move mode)
-- **Replayable relocation log** — every CONSOLIDATE writes a self-contained `<project>.relocation_<YYYYMMDD_HHMMSS>.py` next to the `.toe`. Run it with `python <file>.py` from anywhere to roll back the transfer (Move entries moved back, Copy/Rename entries deleted, Overwrite entries flagged unrecoverable). Survives TD restarts and works even if the project is deleted — useful when other projects or apps reference the same source files
-- **Exclusion presets** — one-click toggles for Images, Video, Audio, 3D/Geo, Data, and TOX file groups
-- **Palette/system exclusion** — skips components sourced from the TD palette and internal system paths
-- Custom **scan scope**: set a root COMP and max recursion depth
-- **Exclusion lists**: skip specific COMPs or file extensions
-- Live **status bar** showing current conflict mode, file count, and last action
-- **Hover tooltips** on every UI control — descriptions appear in the status bar when you hover over any button, toggle, segmented control, preset, or section header
-- **Reset buttons** — global `RESET` reverts all settings to defaults; per-field `×` icons next to *Types* and *COMPs* reset just that field
-- **Preset Save / Load** — write current settings to a JSON file, reload them on demand
-  - **Smart defaults** — when `Presetpath` is blank, falls back to `~/Documents/Derivative/CollectTDProject` (auto-created); when `Presetname` is blank, falls back to `preset_<project_stem>` so each project keeps its own preset by default
-  - **Auto-increment** — saving over an existing preset writes `preset_name_1.json`, `_2`, etc. so previous presets are never overwritten
-- **Safety .toe backup** — optional toggle: when ON, CONSOLIDATE first saves a one-time `<project>.original.toe` next to the running `.toe`, preserving the truly original state across multiple consolidations
-- Scrollable real-time **log viewer** with ample space for long path lists
+- File size calculator — shows total dependency size before you commit
+- Custom scan scope: root COMP and max recursion depth (0 = unlimited)
+- Exclusion lists: skip specific COMPs or file extensions by name
+- Palette/system exclusion — skips components from the TD palette and internal system paths
+- Per-field reset buttons (`×`) next to Types and COMPs; global `RESET` for all settings
+- Hover tooltips on every control — descriptions appear in the status bar
+- Live status bar: conflict mode, file count, last action timestamp
 - Self-contained: single `.tox`, no external Python packages or dependencies
+
+</details>
 
 ---
 
 ## Requirements
 
-- TouchDesigner 2025.32460 or later
+- TouchDesigner 2025 (any build)
 - Python 3.11+ (bundled with TD 2025)
 - Windows or macOS
 
