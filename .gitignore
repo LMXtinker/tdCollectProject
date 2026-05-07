@@ -36,6 +36,7 @@ CollectTDProject_.tox
 .claude/
 .mcp.json
 .superpowers/
+CLAUDE.md
 CLAUDE.original.md
 
 # Agent-ingestion compressed docs (not for distribution)

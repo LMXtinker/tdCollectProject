@@ -1,6 +1,6 @@
 # CollectTDProject
 
-![Version](https://img.shields.io/badge/version-1.3.0-blue) ![TouchDesigner](https://img.shields.io/badge/TouchDesigner-2025.32460+-orange) ![License](https://img.shields.io/badge/license-GPL--3.0-green)
+![Version](https://img.shields.io/badge/version-1.3.0-blue) ![Status](https://img.shields.io/badge/status-beta-yellow) ![TouchDesigner](https://img.shields.io/badge/TouchDesigner-2025.32460+-orange) ![License](https://img.shields.io/badge/license-GPL--3.0-green)
 
 > Last updated: 2026-05-05 · Released: v1.3.0 (broken-path detection, replayable relocation log, preset auto-increment + smart defaults, redesigned panel UI)
 
@@ -9,16 +9,6 @@ A TouchDesigner utility component that scans your project for external file depe
 ---
 
 ## Screenshots
-
-**Demo network** — typical project with file references scattered across drives and paths:
-
-![Demo network](screenshots/02_demo_network.jpg)
-
-**Find results** — scan output listing every found file with its operator path:
-
-![Find results](screenshots/03_find_results.png)
-
-**Panel UI** — full interface with all configuration options:
 
 ![Panel UI](screenshots/01_panel_ui.png)
 
