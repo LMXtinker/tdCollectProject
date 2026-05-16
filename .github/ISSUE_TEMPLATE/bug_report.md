@@ -21,7 +21,7 @@ labels: bug
 **Expected behavior**  
 
 **Log output**  
-<!-- Paste the full log from the CollectTDProject log viewer (FIND or CONSOLIDATE run) -->
+<!-- Paste the full log from the tdCollectProject log viewer (FIND or CONSOLIDATE run) -->
 ```
 paste here
 ```

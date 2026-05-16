@@ -5,7 +5,7 @@ Backup/
 
 # Dev artifacts
 old/
-CollectTDProject_dev.toe
+tdCollectProject_dev.toe
 CollectTDProject_handoff.md
 HANDOFF.md
 scripts/
@@ -33,7 +33,7 @@ Component/
 
 # TD cache + temp
 TDImportCache/
-CollectTDProject_.tox
+tdCollectProject_.tox
 
 # Local tooling
 .claude/

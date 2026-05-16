@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for considering a contribution to CollectTDProject. This is a small beta-stage utility — issues and pull requests are welcome.
+Thanks for considering a contribution to tdCollectProject. This is a small beta-stage utility — issues and pull requests are welcome.
 
 ## Reporting Bugs
 
@@ -16,9 +16,9 @@ Open a [GitHub Issue](../../issues/new?template=bug_report.md). Please include:
 The component is authored live inside a TouchDesigner project. There is no build step.
 
 1. Clone the repo.
-2. Open a fresh `.toe` and drag in `CollectTDProject.tox` to verify the released component, or open the dev `.toe` if you have one locally (dev `.toe` files are gitignored).
+2. Open a fresh `.toe` and drag in `tdCollectProject.tox` to verify the released component, or open the dev `.toe` if you have one locally (dev `.toe` files are gitignored).
 3. Make changes to the COMP — DAT scripts, parameters, UI panels.
-4. When ready: right-click the COMP → **Save Component** → overwrite `CollectTDProject.tox`.
+4. When ready: right-click the COMP → **Save Component** → overwrite `tdCollectProject.tox`.
 5. Commit the updated `.tox` together with any markdown/CHANGELOG changes.
 
 The Python extension class lives in the `Helpers` textDAT (promoted as `ConsolidateExt`, parentshortcut `tool`).

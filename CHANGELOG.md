@@ -2,6 +2,15 @@
 
 All notable changes are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/).
 
+## [0.5.0-beta] — 2026-05-16
+
+### Changed (breaking)
+- **Renamed** the project and component from `CollectTDProject` to `tdCollectProject`. Release asset is now `tdCollectProject.tox`; root COMP path is `/project1/tdCollectProject`.
+- **Default preset folder** moved from `~/Documents/Derivative/CollectTDProject` to `~/Documents/Derivative/tdCollectProject`. Any presets saved with v0.4.0-beta under the old folder will not be auto-discovered — move them manually if you want them picked up by the new default.
+- **GitHub repository** renamed to `LMXtinker/tdCollectProject`. The old URL (`LMXtinker/CollectTDProject`) auto-redirects, but update any local clones via `git remote set-url origin https://github.com/LMXtinker/tdCollectProject.git`.
+
+No functional or behavioural changes beyond the rename.
+
 ## [0.4.0-beta] — 2026-05-16
 
 First public beta release. Consolidates all prior development work into a single shipped artifact. Earlier internal `v1.x` and `v0.3.x` tags have been retired.
@@ -44,7 +53,7 @@ First public beta release. Consolidates all prior development work into a single
 ### Presets
 
 - Save / load all operational parameters to JSON
-- Per-project smart defaults: preset name auto-resolves to `preset_<project_stem>` and folder to `~/Documents/Derivative/CollectTDProject`
+- Per-project smart defaults: preset name auto-resolves to `preset_<project_stem>` and folder to `~/Documents/Derivative/tdCollectProject`
 - Auto-increment on filename collision — `preset_X.json` becomes `preset_X_1.json`, `_2`, etc.
 - Forward-compatible loader — unknown keys are skipped with a log warning
 - JSON also captures the current log content under a `log` key

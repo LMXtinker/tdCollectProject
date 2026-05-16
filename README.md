@@ -1,8 +1,8 @@
-# CollectTDProject
+# tdCollectProject
 
-![Version](https://img.shields.io/badge/version-0.4.0--beta-blue) ![Status](https://img.shields.io/badge/status-beta-yellow) ![TouchDesigner](https://img.shields.io/badge/TouchDesigner-2025+-orange) ![License](https://img.shields.io/badge/license-GPL--3.0-green)
+![Version](https://img.shields.io/badge/version-0.5.0--beta-blue) ![Status](https://img.shields.io/badge/status-beta-yellow) ![TouchDesigner](https://img.shields.io/badge/TouchDesigner-2025+-orange) ![License](https://img.shields.io/badge/license-GPL--3.0-green)
 
-> Last updated: 2026-05-16 · v0.4.0-beta — first public beta release
+> Last updated: 2026-05-16 · v0.5.0-beta — project renamed to `tdCollectProject`
 
 A TouchDesigner utility component that scans your project for external file dependencies, copies or moves them into a local folder structure, and rewrites operator parameters to relative paths — making your project fully portable.
 
@@ -27,7 +27,7 @@ A TouchDesigner utility component that scans your project for external file depe
 
 TD projects reference files by absolute path (`C:/Users/studio/assets/image.png`). Move the project to another machine or share it, and those references break. Manually hunting and relinking files is tedious and error-prone.
 
-CollectTDProject automates the whole process.
+tdCollectProject automates the whole process.
 
 ---
 
@@ -72,7 +72,7 @@ CollectTDProject automates the whole process.
 
 ## Installation
 
-1. Download `CollectTDProject.tox` from the [Releases](../../releases/latest) page.
+1. Download `tdCollectProject.tox` from the [Releases](../../releases/latest) page.
 2. In TouchDesigner, drag the `.tox` into any network.
 3. The component is ready immediately — no additional setup.
 
@@ -172,7 +172,7 @@ Presets are additive — toggling one preset does not affect extensions added ma
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
-| Preset Folder | Folder | *(blank — falls back to `~/Documents/Derivative/CollectTDProject`)* | Directory where preset JSON files live. Created automatically if the default is used and does not yet exist. |
+| Preset Folder | Folder | *(blank — falls back to `~/Documents/Derivative/tdCollectProject`)* | Directory where preset JSON files live. Created automatically if the default is used and does not yet exist. |
 | Preset Name | String | *(blank — falls back to `preset_<project_stem>`)* | Name of the preset to save/load (no `.json` extension needed). The default tracks the running project so each `.toe` keeps its own preset by default. |
 
 The panel's `SAVE` and `LOAD` buttons read these two pars and write/read `<Preset Folder>/<Preset Name>.json`. The JSON contains all operational pars except `Scan Root`, `Preset Folder`, and `Preset Name`. Unknown params in a loaded JSON are skipped with a log warning (forward compatible).
